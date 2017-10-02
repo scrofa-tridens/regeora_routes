@@ -1,0 +1,121 @@
+.b-radio {
+  display: inline-block;
+
+  &__inner + &__label {
+    cursor: pointer;
+  }
+  &__inner:not(checked) {
+    position: absolute;
+    opacity: 0;
+  }
+  &__inner:not(checked) + &__label {
+    position: relative;
+    padding: 0 0 0 30px;
+  }
+  &__inner:not(checked) + &__label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #CDD1DA;
+    border-radius: 50%;
+    background: #FFF;
+  }
+  &__inner:not(checked) + &__label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 6px solid @redLight;
+    //box-shadow: 0 0 100px 100px @redLight;
+    opacity: 0;
+    transition: all .2s;
+    box-shadow: 0 1px 4px rgba(246,93,80,.7);
+  }
+  &__inner:checked + &__label:after {
+    opacity: 1;
+  }
+  &__inner:focus + &__label:before {
+    // box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+  }
+
+}
+
+
+
+
+
+//@options: 19px;
+//
+//
+//.b-checkbox {
+//  display: inline-block;
+//  width: @options;
+//  height: @options;
+//  &__inner {
+//    vertical-align: top;
+//    width: @options;
+//    height: @options;
+//    margin: 0 3px 0 0;
+//  }
+//  &__label {}
+//
+//  &__inner + &__label {
+//    cursor: pointer;
+//  }
+//
+//  &__inner:not(checked) {
+//    position: absolute;
+//    opacity: 0;
+//  }
+//
+//  &__inner:not(checked) + &__label {
+//    position: relative;
+//    padding: 0 0 0 18px;
+//  }
+//
+//  &__inner:not(checked) + &__label:before {
+//    content: '';
+//    position: absolute;
+//    top: 0px;
+//    left: 0;
+//    width: @options;
+//    height: @options;
+//    border: 1px solid #CDD1DA;
+//    border-radius: 3px;
+//    background: #FFF;
+//  }
+//
+//  &__inner:not(checked) + &__label:after {
+//    content: '';
+//    position: absolute;
+//    top: 0px;
+//    left: 0px;
+//    width: @options;
+//    height: @options;
+//    border-radius: 3px;
+//    background: @redLight url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTEgOCI+ICA8ZGVmcz4gICAgPHN0eWxlPiAgICAgIC5jbHMtMSB7ICAgICAgICBmaWxsOiAjZmZmOyAgICAgIH0gICAgPC9zdHlsZT4gIDwvZGVmcz4gIDx0aXRsZT5jaGVja2JveF9WPC90aXRsZT4gIDxnIGlkPSJjaGVja2JveF9WIj4gICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNOTUuMTcsNjguMWEwLjUsMC41LDAsMCwwLS43MSwwbC02LjE0LDYuMzVMODUuMTgsNzEuMWEwLjUsMC41LDAsMSwwLS43MS43MUw4OC4zMiw3Nmw2Ljg1LTcuMTVBMC40OSwwLjQ5LDAsMCwwLDk1LjE3LDY4LjFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODQuMzIgLTY3Ljk1KSIvPiAgPC9nPjwvc3ZnPg==') no-repeat 50% 50%;
+//    background-size: 11px 8px;
+//    box-shadow: 0 1px 5px rgba(202,35,21,.5);
+//    opacity: 0;
+//    transition: all .2s;
+//  }
+//
+//  &__inner:checked + &__label:after {
+//    opacity: 1;
+//  }
+//
+//  &__inner:focus + &__label:before {
+//  }
+//
+//}
+//
+//.checkw {
+//  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAICAMAAAAY5vW6AAAADFBMVEX////////////////1pQ5zAAAAA3RSTlMAf4C/aSLHAAAAJUlEQVR4AWOAA0ZGBJOZCYkJkkKIMjEzQpkQDpgJ5YCYMA6UCQAKUAA9fPlxxwAAAABJRU5ErkJggg==') no-repeat 50% 50%;
+//}

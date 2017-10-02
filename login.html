@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="files/roboto.css"/>
+    <script src="files/jquery.min.js"></script>
+
+
+    <!-- Стили которые надо добавить -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="less/style.less">
+    <!-- /Стили которые надо добавить -->
+    <script src="files/less.min.js"></script>
+
+</head>
+<body>
+
+    <div class="login">
+        <a href="/" class="b-logo"></a>
+        <div class="login__title">
+            Вход в систему
+        </div>
+
+        <form action="#" class="login-form">
+
+            <div class="input">
+                <input class="input__control" type="text">
+                <div class="input__style"></div>
+                <div class="input__inner">Логин</div>
+            </div>
+
+            <div style="display: none;" class="input">
+                <input class="input__control" type="text">
+                <div class="input__style input__style_state_correct"></div>
+                <div class="input__inner">Логин</div>
+            </div>
+
+            <div style="display: none;" class="input">
+                <input class="input__control" type="text">
+                <div class="input__style input__style_state_wrong"></div>
+                <div class="input__inner">Логин</div>
+                <div class="input__title input__title_wrong">Вы ввели не верный логин</div>
+            </div>
+
+            <div class="input">
+                <input class="input__control" type="password">
+                <div class="input__style input__style_password"></div>
+                <div class="input__inner input__inner_password">Пароль</div>
+            </div>
+
+            <div class="input" style="display: none;">
+                <input class="input__control" type="text">
+                <div class="input__style input__style_password input__style_state_wrong"></div>
+                <div class="input__inner input__inner_password input__inner_password_open">Пароль</div>
+                <div class="input__title input__title_wrong">Вы ввели не верный пароль</div>
+            </div>
+
+            <div class="notification">Если вы забыли пароль, то просьба обратиться к администратору системы</div>
+
+            <input class="b-button b-button_size_lg b-button_disabled" type="button" value="Войти" disabled>
+
+            <input style="display: none;" class="b-button b-button_size_lg" type="button" value="Войти">
+
+        </form>
+
+    </div>
+
+</body>
+</html>

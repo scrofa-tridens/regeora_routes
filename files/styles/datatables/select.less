@@ -1,0 +1,46 @@
+@import "../icons";
+
+table.dataTable td.select-checkbox{
+  cursor: pointer;
+  text-align: center;
+  padding: 16px 16px;
+
+  &>div{
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    position: relative;
+
+    &>i{
+      display: inline-block;
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 10px;
+      height: 8px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+table.dataTable td.select-checkbox:hover{
+  &>div{
+    &>i{
+      /*.set-icon-background("ok-red");*/
+    }
+  }
+}
+
+table.dataTable tr.selected td.select-checkbox{
+  &>div{
+    background: #f65d50;
+    border: 1px solid transparent;
+
+    &>i{
+      .set-icon-background("ok-white");
+    }
+  }
+}

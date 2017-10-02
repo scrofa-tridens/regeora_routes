@@ -1,0 +1,179 @@
+.input {
+  position: relative;
+  // overflow: hidden;
+  height: @lgHeight;
+  line-height: @lgHeight;
+  margin-bottom: 20px;
+  padding: 0 80px 0 0;
+  box-sizing: border-box;
+
+  &__control {
+    font-size: 14px;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    padding: 0 0 0 20px;
+    height: @lgHeight;
+    line-height: @lgHeight;
+    color: @asphalt2;
+    border: none;
+    background: none;
+    outline: none;
+    transition: all .3s ease;
+
+    &.disabled {
+      &::placeholder {
+        opacity: 1;
+        color: @gray4;
+      }
+
+      &::-webkit-input-placeholder {
+        color: @gray4;
+      }
+      &:-ms-input-placeholder {
+        color: @gray4;
+      }
+      &::-moz-placeholder {
+        color: @gray4;
+        opacity: 1;
+      }
+      &:-moz-placeholder {
+        color: @gray4;
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+
+  &__style {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: @lgHeight;
+    line-height: @lgHeight;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background: @textFieldBg;
+
+    &_state {
+      box-shadow: inset 0 0 1px @gray5;
+      background: @textFieldBg;
+      &_correct {
+        border-color: @green;
+      }
+      &_wrong {
+        border-color: @redLight
+      }
+      &_msg {
+        position: absolute;
+        left: 0;
+        top: calc(~'100% + 3px');
+        right: 0;
+        line-height: 1;
+        font-size: 12px;
+        &_wrong {
+          color: @redLight;
+        }
+      }
+    }
+
+    //&_password {
+    //  display: none;
+    //}
+
+  }
+
+  &__inner {
+    font-size: 14px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: @lgHeight;
+    line-height: @lgHeight;
+    padding:  0 20px 0 19px;
+    text-align: left;
+    color: @gray4;
+    transition: all .3s;
+
+    &_password {
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 25;
+        right: 17px;
+        top: 17px;
+        display: block;
+        width: 20px;
+        height: 14px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAOCAMAAACPS2sYAAABy1BMVEXDwr72XFD2XVD////Dwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFD2XVDDwr72XFDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFDDwr72XFDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFDDwr72XFD2XVDDwr72XFDDwr72XFD2XVDDwr72XFDDwr72XFDDwr72XFD2XVDDwr72XFD2XVDDwr72XFD2XVDDwr72XVASzQUdAAAAl3RSTlMAAAAAAQEBBgYGCAgICQkJDg4OFhYXFxcYGBkZGxsbHR0dHh4eIiIkJCQlJSUtLS1RUVFSUlJgYGBhYWFiYmJqamp2dnZ3d3d4eHh6enp8fHyIiImJkJCRkZ6enqSkpKurq6ysrLCwsLGxsbW1trbQ0NDT09Pf39/g4OLi4uPj4+Xl5ubm6Ojp6ent7e7u9fX19vb29/f3wSJK1gAAAa1JREFUOMtjZAABATVNMUnmJ6+u3/oA4jJiEfuPRYwJh152F/Nb19+/ZhAV1FQ7uecnWBBD7D8WMSbsetU9fm5/yAABSm7su68BBTHF/mMRY8KqVzfq4J4/DOwBxkynN/xkYHF0WnaZEYvYf4gYDIDFmLCIMYpmHDoI5IRKrGUIfrIeyLK3m8GIRew/RAwBgGJMWMQYUx/vADG7JjxjkCooAzE9FP5hEfsDEUMCHgr/sYgxZjyAa5YoAmt2leLCIma+EV2zaxDjJgyxQLiXxday+L9YC3K29UxmLGLNz9C9Zy3L+BxDTAYYKREH9oMiwJQBFAEMTs4rgJGCKTZtWta6/YgIYHAKnZbFOD1zPYpYyPRMYLJR9f225Qk86rk23wZGPabYf4bpt1HEVDOByWbaHRQxlSxwwuZyMboJTZzq5/Z8AydODDGggcUunoegYnbb9/SCDSxx8TgMFbPdsacHYiAw+2hqiskwPHl16wpS1kMVA2e96Ys0Tf8yMJ++FZ0Jz3rTFmua/GNgOnMrKgusl5mBOPAXbGAmAsENzEIgkg2EmwkBTFAabhoQAAD/oxl5/42xOgAAAABJRU5ErkJggg==) no-repeat -40px 0;
+      }
+
+      &:hover {
+        &::before {
+          background-position: -60px 0;
+        }
+      }
+
+      &_open {
+        &::before {
+          background-position: 0 0;
+        }
+        &:hover {
+          &::before {
+            background-position: -20px 0;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  &__title {
+    font-size: 12px;
+    position: absolute;
+    z-index: 15;
+    top: 0px;
+    right: 90px;
+    &_wrong {
+      color: @redLight;
+    }
+  }
+
+  &__control:focus + &__style {
+    transition: background-color .3s;
+    border-color: @gray5;
+    background-color: #ffffff;
+  }
+  &__control:focus + &__style + &__inner {
+    width: 80px;
+
+  }
+  &__control:focus + &__style + &__inner_password {
+    text-indent: 199px;
+  }
+}
+
+.classSomethingIn {
+  border: 20px solid #f00 !important;
+}
+
+
+/* file size: 1.5ko | optimized file size: 1.1ko | base64 size: 1.5ko */
+.look-hover {
+}
+
+input {
+  outline: none;
+}
+input:-webkit-autofill {
+    background-color: transparent !important;
+}

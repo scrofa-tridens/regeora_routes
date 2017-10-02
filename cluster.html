@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cluster</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet/less" type="text/css" href="less/style.less">
+	<script src="files/less.min.js"></script>
+</head>
+
+<body>
+	<!-- 
+
+	Типы секторов кластеров (разделение по цветам):
+	1. sector_type_bus - автобусы, троллейбусы, трамваи (цвет - синий)
+	2. sector_type_road - строительно-дорожная техника (цвет - оранжевый)
+	3. sector_type_trash - мусоровозы (цвет - зеленый)
+	4. sector_type_control - госадмтехнадзор (цвет - голубой)
+	5. sector_type_school - школьные автобусы (цвет - желтый)
+
+	Размеры секторов кластеров:
+	1. 20% - sector_size_twenty
+	2. 25% - sector_size_twentyfive
+	3. 33% - sector_size_thirtythree
+	4. 50% - sector_size_fifty
+	5. 100% - sector_size_onehundred
+
+	 -->
+	<div class="clusters">
+		<div class="cluster">
+			<div class="cluster__sectors">
+				<div class="sector sector_size_twenty sector_type_bus">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twenty sector_type_road">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twenty sector_type_trash">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twenty sector_type_control">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twenty sector_type_school">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /cluster__sectors -->
+			<div class="cluster__info">
+				<div class="sector sector_size_twenty">
+					<span class="sector__value">751</span>
+					<span class="notification-info sector__notification">825</span>
+				</div>
+				<div class="sector sector_size_twenty">
+					<span class="sector__value">726</span>
+					<span class="notification-info sector__notification">915</span>
+				</div>
+				<div class="sector sector_size_twenty">
+					<span class="sector__value">763</span>
+					<span class="notification-info sector__notification">958</span>
+				</div>
+				<div class="sector sector_size_twenty">
+					<span class="sector__value">754</span>
+					<span class="notification-info sector__notification">94+</span>
+				</div>
+				<div class="sector sector_size_twenty">
+					<span class="sector__value">755</span>
+					<span class="notification-info sector__notification">396</span>
+				</div>
+			</div>
+			<!-- /cluster__info -->
+		</div>
+		<!-- /cluster -->
+		<div class="cluster">
+			<div class="cluster__sectors">
+				<div class="sector sector_size_twentyfive sector_type_bus">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twentyfive sector_type_road">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twentyfive sector_type_trash">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_twentyfive sector_type_school">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /cluster__sectors -->
+			<div class="cluster__info">
+				<div class="sector sector_size_twentyfive">
+					<span class="sector__value">715</span>
+					<span class="notification-info sector__notification">932</span>
+				</div>
+				<div class="sector sector_size_twentyfive">
+					<span class="sector__value">752</span>
+					<span class="notification-info sector__notification">369</span>
+				</div>
+				<div class="sector sector_size_twentyfive">
+					<span class="sector__value">733</span>
+					<span class="notification-info sector__notification">492</span>
+				</div>
+				<div class="sector sector_size_twentyfive">
+					<span class="sector__value">714</span>
+					<span class="notification-info sector__notification">955</span>
+				</div>
+			</div>
+			<!-- /cluster__info -->
+		</div>
+		<!-- /cluster -->
+		<div class="cluster">
+			<div class="cluster__sectors">
+				<div class="sector sector_size_thirtythree sector_type_bus">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_thirtythree sector_type_road">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_thirtythree sector_type_trash">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /cluster__sectors -->
+			<div class="cluster__info">
+				<div class="sector sector_size_thirtythree">
+					<span class="sector__value">741</span>
+					<span class="notification-info sector__notification">975</span>
+				</div>
+				<div class="sector sector_size_thirtythree">
+					<span class="sector__value">742</span>
+					<span class="notification-info sector__notification">938</span>
+				</div>
+				<div class="sector sector_size_thirtythree">
+					<span class="sector__value">573</span>
+					<span class="notification-info sector__notification">957</span>
+				</div>
+			</div>
+			<!-- /cluster__info -->
+		</div>
+		<!-- /cluster -->
+		<div class="cluster">
+			<div class="cluster__sectors">
+				<div class="sector sector_size_fifty sector_type_bus">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+				<div class="sector sector_size_fifty sector_type_road">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /cluster__sectors -->
+			<div class="cluster__info">
+				<div class="sector sector_size_fifty">
+					<span class="sector__value">762</span>
+					<span class="notification-info sector__notification">956</span>
+				</div>
+				<div class="sector sector_size_fifty">
+					<span class="sector__value">743</span>
+					<span class="notification-info sector__notification">946</span>
+				</div>
+			</div>
+			<!-- /cluster__info -->
+		</div>
+		<!-- /cluster -->
+		<div class="cluster">
+			<div class="cluster__sectors">
+				<div class="sector sector_size_onehundred sector_type_bus">
+					<div class="sector__slice">
+						<div class="sector__content"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /cluster__sectors -->
+			<div class="cluster__info">
+				<div class="sector sector_size_onehundred">
+					<span class="sector__value">753</span>
+					<span class="notification-info sector__notification">944</span>
+				</div>
+			</div>
+			<!-- cluster__info -->
+		</div>
+		<!-- /cluster -->
+		<div class="markers">
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-bus-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-trolleybus-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-tram-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+
+
+
+			<div class="effect effect_blue effect_round">
+				<div class="marker marker_type_bus">
+					<span class="marker__icon icon-bus"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(0deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_blue effect_round">
+				<div class="marker marker_type_bus">
+					<span class="marker__icon icon-trolleybus"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(25deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_blue effect_round">
+				<div class="marker marker_type_bus">
+					<span class="marker__icon icon-tram"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(45deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+
+
+
+			<div class="effect effect_blue effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_bus marker_motionless">
+					<span class="marker__icon icon-bus-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_blue effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_bus marker_motionless">
+					<span class="marker__icon icon-trolleybus-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_blue effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_bus marker_motionless">
+					<span class="marker__icon icon-tram-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+
+
+
+
+			<div class="marker marker_type_bus marker_motionless marker_disabled">
+				<span class="marker__icon icon-bus"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+			<div class="marker marker_type_bus marker_motionless marker_disabled">
+				<span class="marker__icon icon-trolleybus"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+			<div class="marker marker_type_bus marker_motionless marker_disabled">
+				<span class="marker__icon icon-tram"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+
+
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-control-ts"></span>
+				</div>
+			</div>
+			<!-- /marker -->
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-school-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-road-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_round">
+				<div class="marker marker-ts">
+					<span class="marker__icon icon-trash-ts"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+
+
+
+			<div class="effect effect_light effect_round">
+				<div class="marker marker_type_control">
+					<span class="marker__icon icon-control"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(90deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_yellow effect_round">
+				<div class="marker marker_type_school">
+					<span class="marker__icon icon-school"></span>
+					<span class="notification-info marker__notification">3</span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(135deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_orange effect_round">
+				<div class="marker marker_type_road">
+					<span class="marker__icon icon-road"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(180deg);"></span>
+					</div>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_green effect_round">
+				<div class="marker marker_type_trash">
+					<span class="marker__icon icon-trash"></span>
+					<div class="marker__center">
+						<span class="marker__direction" style="transform: rotate(270deg);"></span>
+					</div>
+				</div>
+			</div>
+			<!-- /marker -->
+
+
+
+
+				<!-- marker_motionless -->
+			<div class="effect effect_light effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_control marker_motionless">
+					<span class="marker__icon icon-control-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_yellow effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_school marker_motionless">
+					<span class="marker__icon icon-school-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_orange effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_road marker_motionless">
+					<span class="marker__icon icon-road-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+			<div class="effect effect_green effect_rectangle">
+				<div class="marker marker-stop marker-stop_type_trash marker_motionless">
+					<span class="marker__icon icon-trash-stop"></span>
+				</div>
+			</div>
+				<!-- /marker -->
+
+
+
+
+			<!-- marker_disabled -->
+			<div class="marker marker_type_control marker_motionless marker_disabled">
+				<span class="marker__icon icon-control"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+			<div class="marker marker_type_school marker_motionless marker_disabled">
+				<span class="marker__icon icon-school"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+			<div class="marker marker_type_road marker_motionless marker_disabled">
+				<span class="marker__icon icon-road"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+			<div class="marker marker_type_trash marker_motionless marker_disabled">
+				<span class="marker__icon icon-trash"></span>
+				<span class="notification-info marker__notification">!</span>
+			</div>
+			<!-- /marker -->
+		</div>
+		<!-- /markers -->
+
+
+
+
+		<div class="buttons">
+			<a href="#" class="b-button-zoom b-button-zoom_in"></a>
+			<a href="#" class="b-button-zoom b-button-zoom_out"></a>
+		</div>
+		<!-- /buttons -->
+	</div>
+	<!-- /clusters -->
+</body>
+
+</html>

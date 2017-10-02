@@ -1,0 +1,343 @@
+.cluster {
+	position: relative;
+	border: solid 2px #fff;
+	box-shadow: 0 2px 6px rgba(0,4,7,.2);
+	padding: 0;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	&__sectors, &__info {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&__sectors {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+
+.sector {
+	&_size_twenty {
+		&:first-child { 
+			.sector {
+				&__slice {
+					transform: skewY(-18deg);
+				}
+				&__value {
+					left: calc(~'50% + 12px');
+					top: 14px;		
+				}
+				&__notification {
+					left: calc(~'50% + 16px');
+					top: -3px;
+					transform: none;
+				}
+			}
+		}
+		&:nth-child(2) {
+			.sector {
+				&__slice {
+					transform: rotate(72deg) skewY(-18deg);
+				}
+				&__value {
+					left: calc(~'50% + 17px');
+					top: 33px;
+				}
+				&__notification {
+					left: calc(~'50% + 28px');
+					top: 39px;
+				}
+			}
+		}
+		&:nth-child(3) {
+			.sector {
+				&__slice {
+					transform: rotate(144deg) skewY(-18deg);
+				}
+				&__value {
+					bottom: 10px;
+					left: 50%;
+				}
+				&__notification {
+					bottom: -10px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		&:nth-child(4) {
+			.sector {
+				&__slice {
+					transform: rotate(216deg) skewY(-18deg);
+				}
+				&__value {
+					left: 16px;
+					top: 33px;
+				}
+				&__notification {
+					right: calc(~'100% - 5px');
+					top: 40px;
+				}
+			}
+		}
+		&:nth-child(5) {
+			.sector {
+				&__slice {
+					transform: rotate(288deg) skewY(-18deg);
+				}
+				&__value {
+					top: 14px;
+					left: 22px;
+				}
+				&__notification {
+					top: -3px;
+					right: calc(~'100% - 18px');
+				}
+			}
+		}
+	}
+
+	&_size_twentyfive {
+		&:nth-child(1) {
+			.sector {
+				&__value {
+					left: calc(~'50% + 13px');
+					top: 16px	;
+				}
+				&__notification {
+					left: calc(~'50% + 20px');
+					top: 1px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			.sector {
+				&__slice {
+					transform: rotate(90deg);
+				}
+				&__value {
+					left: calc(~'50% + 13px');
+					bottom: 16px;
+				}
+				&__notification {
+					left: calc(~'50% + 20px');
+					bottom: 1px;
+				}
+			}
+		}
+		&:nth-child(3) {
+			.sector {
+				&__slice {
+					transform: rotate(180deg);
+				}
+				&__value {
+					left: 20px;
+					bottom: 16px;
+				}
+				&__notification {
+					right: calc(~'100% - 13px');
+					bottom: 1px;
+				}
+			}
+		}
+		&:nth-child(4) {
+			.sector {
+				&__slice {
+					transform: rotate(270deg);
+				}
+				&__value {
+					left: 20px;
+					top: 16px;
+				}
+				&__notification {
+					right: calc(~'100% - 13px');
+					top: 1px;
+				}
+			}
+		}
+	}
+
+	&_size_thirtythree {
+		.sector {
+			&__slice {
+				width: 100%;
+				height: 100%;
+				right: auto;
+				left: 50%;
+				top: auto;
+				bottom: 50%;
+			}
+		}
+		&:first-child {
+			.sector {
+				&__slice {
+					transform: skewY(30deg);
+				}
+				&__value {
+					left: calc(~'50% + 13px');
+					top: 19px;
+				}
+				&__notification {
+					left: calc(~'50% + 25px');
+					top: 9px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			.sector {
+				&__slice {
+					transform: rotate(120deg) skewY(30deg);
+				}
+				&__value {
+					top: calc(~'50% + 10px');
+					left: 50%;
+				}
+				&__notification {
+					left: 50%;
+					bottom: -10px;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		&:nth-child(3) {
+			.sector {
+				&__slice {
+					transform: rotate(240deg) skewY(30deg);
+				}
+				&__value {
+					top: 19px;
+					left: 21px;
+				}
+				&__notification {
+					right: calc(~'100% - 8px');
+					top: 9px;
+				}
+			}
+		}
+	}
+
+	&_size_fifty {
+		.sector {
+			&__slice {
+				height: 200%;
+				width: 100%;
+				transform-origin: 0 50%;
+				left: 50%;
+				top: -50%;
+			}
+		}
+		&:first-child {
+			.sector {
+				&__slice {
+					transform: rotate(-45deg);
+				}
+				&__value {
+					top: 18px;
+					left: calc(~'50% + 10px');
+				}
+				&__notification {
+					left: calc(~'50% + 20px');
+					top: 2px;
+				}
+			}
+		}
+		&:last-child {
+			.sector {
+				&__slice {
+					transform: rotate(135deg);
+				}
+				&__value {
+					bottom: 16px;
+					left: 22px;
+				}
+				&__notification {
+					right: calc(~'100% - 12px');
+					bottom: 4px;
+				}
+			}
+		}
+		.sector__content {
+			border-radius: 0;
+		}
+	}
+
+	&_size_onehundred {
+		.sector {
+			&__slice {
+				border-radius: 0;
+				width: 100%;
+				height: 100%;
+			}
+			&__value {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&__content {
+				border-radius: 0;
+			}
+			&__notification {
+				left: calc(~'50% + 16px');
+				top: -3px;
+			}
+		}
+	}
+}
+
+
+.sector {
+	&__slice {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 50%;
+		transform-origin: 0% 100%;
+	}
+	&__content {
+		position: absolute;
+		left: -100%;
+		width: 200%;
+		height: 200%;
+		border-radius: 50%;
+	}
+	&__value {
+		color: #fff;
+		position: absolute;
+		z-index: 10;
+		font: 100 11px/11px "Roboto", sans-serif;
+		transform: translateX(-50%);
+	}
+	&_type_bus {
+		.sector__content {
+			background-color: @blue-marker;
+		}
+	}
+	&_type_road {
+		.sector__content {
+			background-color: @orange-marker;
+		}
+	}
+	&_type_trash {
+		.sector__content {
+			background-color: @green-marker;
+		}
+	}
+	&_type_control {
+		.sector__content {
+			background-color: @light-blue-marker;
+		}
+	}
+	&_type_school {
+		.sector__content {
+			background-color: @yellow-marker;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Marker</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet/less" type="text/css" href="less/style.less">
+  <script src="files/less.min.js"></script>
+</head>
+<body>
+
+	<!-- 
+
+	Типы маркеров (разделение по цветам):
+	1. marker_type_bus - автобусы, троллейбусы, трамваи (цвет - синий)
+	2. marker_type_road - строительно-дорожная техника (цвет - оранжевый)
+	3. marker_type_trash - мусоровозы (цвет - зеленый)
+	4. marker_type_control - госадмтехнадзор (цвет - голубой)
+	5. marker_type_school - школьные автобусы (цвет - желтый)
+
+	Транспорт без движения:
+	marker_motionless
+
+	Транспорт неактивен:
+	marker_disabled
+
+	Иконки для транспорта:
+	1. icon-bus - автобус
+	2. icon-trolleybus - троллейбус
+	3. icon-tram - трамвай
+	4. icon-road - строительно-дорожная техника
+	5. icon-trash - мусоровозы
+	6. icon-control - госадмтехнадзор
+	7. icon-school - школьные автобусы
+
+	 -->
+
+	<div class="markers"> 
+
+		<div class="marker marker_type_bus">
+			<span class="marker__icon icon-bus"></span>				
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(0deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_bus">
+			<span class="marker__icon icon-trolleybus"></span>				
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(25deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_bus">
+			<span class="marker__icon icon-tram"></span>				
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(45deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_bus marker_motionless">
+			<span class="marker__icon icon-bus"></span>				
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(60deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_bus marker_motionless marker_disabled">
+			<span class="marker__icon icon-tram"></span>		
+			<span class="notification-info marker__notification">!</span>		
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(75deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_control">
+			<span class="marker__icon icon-control"></span>		
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(90deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_school">
+			<span class="marker__icon icon-school"></span>
+			<span class="notification-info marker__notification">3</span>
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(135deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_road">
+			<span class="marker__icon icon-road"></span>	
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(180deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+
+		<div class="marker marker_type_trash">
+			<span class="marker__icon icon-trash"></span>
+			<div class="marker__center">
+				<span class="marker__direction" style="transform: rotate(270deg);"></span>
+			</div>				
+		</div><!-- /marker -->
+		
+	</div><!-- /markers -->
+
+
+</body>
+</html>

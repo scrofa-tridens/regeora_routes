@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="files/roboto.css"/>
+    <script src="files/jquery.min.js"></script>
+    <script src="js/jquery.shorten.1.0.js"></script>
+
+
+    <!-- Стили которые надо добавить -->
+    <script src="js/script.js"></script>
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+    <!-- /Стили которые надо добавить -->
+    <!-- <script src="files/less.min.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="page">
+
+<div class="header header_fixed clearAfter">
+
+    <div class="header__title">Кадровый учет</div>
+
+    <div class="top-menu clearAfter">
+        <ul class="top-menu__list">
+            <li class="top-menu__item">
+                <a href="javascript:void(0)" class="top-menu__link top-menu__link_icon_search">
+                    <span class="top-menu__title top-menu__title_search">Поиск</span>
+                </a>
+                <div class="f-search f-search-posit">
+                    <form action="#">
+                        <input  class="f-search__pole" type="text" placeholder="поиск">
+                        <input  class="f-search__button" type="button">
+                    </form>
+                </div>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_filter">
+                    <span class="top-menu__title top-menu__title_filter">Фильтр</span>
+                </a>
+            </li>
+            <li class="top-menu__item">
+                <a href="javascript:void(0)" class="top-menu__link top-menu__link_icon_add-remove">
+                    <span class="top-menu__title top-menu__title_add-remove">Добавить/удалить столбцы таблицы</span>
+                </a>
+
+                <div class="filter-menu">
+                    <form action="#">
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-01"checked />
+                                <label for="b-checkbox-filter-01" class="b-checkbox__label"></label>
+                            </div>
+                            <label  for="b-checkbox-filter-01" class="filter-name__text">Предприятие перевозчик</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-02"checked />
+                                <label for="b-checkbox-filter-02" class="b-checkbox__label"></label>
+                            </div>
+                            <label  for="b-checkbox-filter-02" class="filter-name__text">Фамилия</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-03"checked />
+                                <label for="b-checkbox-filter-03" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-03" class="filter-name__text">Имя</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-04"checked />
+                                <label for="b-checkbox-filter-04" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-04" class="filter-name__text">Отчество</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-05"checked />
+                                <label for="b-checkbox-filter-05" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-05" class="filter-name__text">Табельный номер</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-06"checked />
+                                <label for="b-checkbox-filter-06" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-06" class="filter-name__text">Телефон</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-07"checked />
+                                <label for="b-checkbox-filter-07" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-07" class="filter-name__text">Статус работника</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-08"checked />
+                                <label for="b-checkbox-filter-08" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-08" class="filter-name__text">Дата начала действия статуса</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-09" checked />
+                                <label for="b-checkbox-filter-09" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-09" class="filter-name__text">Отклонения</label>
+                        </div>
+
+                        <div class="filter-name">
+                            <div class="b-checkbox">
+                                <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-10" checked />
+                                <label for="b-checkbox-filter-10" class="b-checkbox__label"></label>
+                            </div>
+                            <label for="b-checkbox-filter-10" class="filter-name__text">Должность</label>
+                        </div>
+
+
+                        <div class="b-slider _options clearAfter">
+                            <div class="b-slider__title">Выбрать все</div>
+                            <div class="b-slider__title" style="display: none;">Снять все</div>
+
+                            <div class="b-slider__control" style="display: none;">
+                                <div class="b-slider__line"></div>
+                                <div class="b-slider__circle"></div>
+                            </div>
+
+                            <div class="b-slider__control" style="display: none;">
+                                <div class="b-slider__line _selected_yes"></div>
+                                <div class="b-slider__circle  _selected_yes"></div>
+                            </div>
+
+                            <div class="b-slider__control" >
+                                <div class="b-slider__line _selected_all"></div>
+                                <div class="b-slider__circle _selected_all"></div>
+                            </div>
+
+
+                            <div class="b-slider__counter" style="display: none;">
+                                <span class="b-slider__selected">234</span>
+                                /
+                                <span class="b-slider__all">456</span>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_plus popup-link">
+                    <span class="top-menu__title top-menu__title_plus">Добавить</span>
+                </a>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_print">
+                    <span class="top-menu__title top-menu__title_print">Печать</span>
+                </a>
+            </li>
+            <li class="top-menu__item">
+                <div class="top-menu__separator"></div>
+            </li>
+            <li class="top-menu__item b-profile-view">
+                <a href="#" class="top-menu__link top-menu__link_icon_eye popup-link active">
+                    <span class="top-menu__title top-menu__title_eye">Смотреть</span>
+                </a>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_edit popup-link">
+                    <span class="top-menu__title top-menu__title_edit">Редактировать</span>
+                </a>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_basket">
+                    <span class="top-menu__title top-menu__title_basket">Удалить</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="left-menu">
+
+    <a href="#" class="left-menu-button"></a>
+
+    <ul class="left-menu__list">
+        <li class="left-menu__item">
+            <a class="left-menu__link passenger active" href="#">
+                <span class="left-menu__text">Перевозки пассажиров</span>
+                <span class="left-menu__title">Перевозки пассажиров</span>
+            </a>
+            <div class="sub-menu">
+                <ul class="left-menu__list">
+                    <li class="left-menu__item">
+                        <a class="left-menu__link back" href="#">
+                            <span class="left-menu__text">Вернуться назад</span>
+                            <span class="left-menu__title">Вернуться назад</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link management" href="#">
+                            <span class="left-menu__text">Управление правами</span>
+                            <span class="left-menu__title">Управление правами</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link accounting" href="#">
+                            <span class="left-menu__text">Кадровый учет</span>
+                            <span class="left-menu__title">Кадровый учет</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link add-item" href="#">
+                            <span class="left-menu__text">Добавочный пункт меню</span>
+                            <span class="left-menu__title">Добавочный пункт меню</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link road" href="#">
+                <span class="left-menu__text">Содержание дорог</span>
+                <span class="left-menu__title">Содержание дорог</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link transport" href="#">
+                <span class="left-menu__text">Управление транспортом</span>
+                <span class="left-menu__title">Управление транспортом</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link network" href="#">
+                <span class="left-menu__text">Маршрутная сеть</span>
+                <span class="left-menu__title">Маршрутная сеть</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link map" href="#">
+                <span class="left-menu__text">Карта</span>
+                <span class="left-menu__title">Карта</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link waste" href="#">
+                <span class="left-menu__text">Перевозки отходов</span>
+                <span class="left-menu__title">Перевозки отходов</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link children" href="#">
+                <span class="left-menu__text">Перевозки детей</span>
+                <span class="left-menu__title">Перевозки детей</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link reports" href="#">
+                <span class="left-menu__text">Отчеты</span>
+                <span class="left-menu__title">Отчеты</span>
+            </a>
+        </li>
+        <li class="left-menu__item 1111">
+            <a class="left-menu__link control" href="#">
+                <span class="left-menu__text">Управление</span>
+                <span class="left-menu__title">Управление</span>
+            </a>
+        </li>
+        <li class="left-menu__item left-menu__item_alert  2222">
+            <a class="left-menu__link alerts active" href="#">
+                <span class="left-menu__numb">4</span>
+                <span class="left-menu__text">Оповещения</span>
+                <span class="left-menu__title">Оповещения</span>
+            </a>
+        </li>
+        <li class="left-menu__item left-menu__item_profile">
+            <a class="left-menu__link profile" href="#">
+                <span class="left-menu__text">Профиль</span>
+                <span class="left-menu__title">Профиль</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- /.left-menu -->
+
+
+<div class="r-block">
+
+
+    <div class="b-table-box">
+        <table class="b-table">
+            <tr class="b-table__header">
+                <th class="b-table__check-box"></th>
+                <th class="b-table__company active">
+                    Предприятие перевозчик
+                    <a href="#" class="b-table__arrow b-table__arrow_up"></a>
+                    <a href="#" class="b-table__arrow b-table__arrow_down"></a>
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter active"></a>
+
+                        <div class="filtration">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-01" checked />
+                                            <label for="filtration-filter-01" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-01" class="filter-name__text">Предприятие перевозчик</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-02" checked />
+                                            <label for="filtration-filter-02" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-02" class="filter-name__text">Фамилия</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-03" checked />
+                                            <label for="filtration-filter-03" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-03" class="filter-name__text">Имя</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-04" checked />
+                                            <label for="filtration-filter-04" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-04" class="filter-name__text">Отчество</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-05" checked />
+                                            <label for="filtration-filter-05" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-05" class="filter-name__text">Табельный номер</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-06" checked />
+                                            <label for="filtration-filter-06" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-06" class="filter-name__text">Телефон</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-07" checked />
+                                            <label for="filtration-filter-07" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-07" class="filter-name__text">Статус работника</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-08" checked />
+                                            <label for="filtration-filter-08" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-08" class="filter-name__text">Дата начала действия статуса</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-09" checked />
+                                            <label for="filtration-filter-09" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-09" class="filter-name__text">Отклонения</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10" checked />
+                                            <label for="filtration-filter-10" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-10" class="filter-name__text">Должность</label>
+                                    </div>
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__second_name">
+                    Фамилия
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-01" checked />
+                                            <label for="filtration-filter-01" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-01" class="filter-name__text">Предприятие перевозчик</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-02" checked />
+                                            <label for="filtration-filter-02" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-02" class="filter-name__text">Фамилия</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-03" checked />
+                                            <label for="filtration-filter-03" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-03" class="filter-name__text">Имя</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-04" checked />
+                                            <label for="filtration-filter-04" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-04" class="filter-name__text">Отчество</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-05" checked />
+                                            <label for="filtration-filter-05" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-05" class="filter-name__text">Табельный номер</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-06" checked />
+                                            <label for="filtration-filter-06" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-06" class="filter-name__text">Телефон</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-07" checked />
+                                            <label for="filtration-filter-07" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-07" class="filter-name__text">Статус работника</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-08" checked />
+                                            <label for="filtration-filter-08" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-08" class="filter-name__text">Дата начала действия статуса</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-09" checked />
+                                            <label for="filtration-filter-09" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-09" class="filter-name__text">Отклонения</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10" checked />
+                                            <label for="filtration-filter-10" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label for="filtration-filter-10" class="filter-name__text">Должность</label>
+                                    </div>
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__name">
+                    Имя
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-0011" checked />
+                                            <label for="filtration-filter-0011" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-0011" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-0021" checked />
+                                            <label for="filtration-filter-0021" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-0021" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </th>
+                <th class="b-table__middle_name">
+                    Отчество
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration"  style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10a" checked />
+                                            <label for="filtration-filter-10a" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-10a" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-20a" checked />
+                                            <label for="filtration-filter-20a" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-20a" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__personnel-number">
+                    Табельный №
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-100" checked />
+                                            <label for="filtration-filter-100" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-100" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-200" checked />
+                                            <label for="filtration-filter-200" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-200" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__phone">
+                    Телефон
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-010b" checked />
+                                            <label for="filtration-filter-010b" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-010b" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-020b" checked />
+                                            <label for="filtration-filter-020b" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-020b" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__status">
+                    Статус работника
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10c" checked />
+                                            <label for="filtration-filter-10c" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-10c" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-20c" checked />
+                                            <label for="filtration-filter-20c" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-20c" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__date">
+                    Дата начала действия статуса
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10d" checked />
+                                            <label for="filtration-filter-10d" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-10d" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-20d" checked />
+                                            <label for="filtration-filter-20d" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-20d" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__deviations">
+                    Отклонения
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10i" checked />
+                                            <label for="filtration-filter-10i" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-10i" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-20i" checked />
+                                            <label for="filtration-filter-20i" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-20i" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+                <th class="b-table__position">
+                    Должность
+                    <div class="b-table__filetr">
+                        <a href="#" class="b-table__icon-filter"></a>
+
+                        <div class="filtration" style="display: none;">
+                            <form action="#">
+                                <div class="filtration__search">
+                                    <input type="text" class="filtration__pole" placeholder="Поиск">
+                                    <input type="button" class="filtration__button">
+                                </div>
+
+                                <div class="filtration__block">
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-10f" checked />
+                                            <label for="filtration-filter-10f" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-10f" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                    <div class="filter-name">
+                                        <div class="b-checkbox">
+                                            <input type="checkbox" class="b-checkbox__inner" id="filtration-filter-20f" checked />
+                                            <label for="filtration-filter-20f" class="b-checkbox__label"></label>
+                                        </div>
+                                        <label  for="filtration-filter-20f" class="filter-name__text">Данные</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="b-slider _options clearAfter">
+                                    <div class="b-slider__title" style="display: none;">Выбрать все</div>
+                                    <div class="b-slider__title">Снять все</div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line"></div>
+                                        <div class="b-slider__circle"></div>
+                                    </div>
+
+                                    <div class="b-slider__control">
+                                        <div class="b-slider__line _selected_yes"></div>
+                                        <div class="b-slider__circle  _selected_yes"></div>
+                                    </div>
+
+                                    <div class="b-slider__control" style="display: none;">
+                                        <div class="b-slider__line _selected_all"></div>
+                                        <div class="b-slider__circle _selected_all"></div>
+                                    </div>
+
+
+                                    <div class="b-slider__counter">
+                                        <span class="b-slider__selected">234</span>
+                                        /
+                                        <span class="b-slider__all">456</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </th>
+            </tr>
+            <tr class="active">
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-01" />
+                        <label for="b-checkbox-01" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-02" />
+                        <label for="b-checkbox-02" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название  предприятия”</td>
+                <td>Сергеев</td>
+                <td>Петр</td>
+                <td class="vvvv">Владимирович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__inactive">Не активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-03" />
+                        <label for="b-checkbox-03" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td class="vvvv">Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Должность</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-04" />
+                        <label for="b-checkbox-04" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Пример названия предприятия более чем в три строки, при что полное название Пример названия предприятия более чем в</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__attention">Требует уточнения</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-05" />
+                        <label for="b-checkbox-05" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-06" />
+                        <label for="b-checkbox-06" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-07" />
+                        <label for="b-checkbox-07" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b-checkbox">
+                        <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-08" />
+                        <label for="b-checkbox-08" class="b-checkbox__label"></label>
+                    </div>
+                </td>
+                <td class="active">ООО “Название предприятия в две строки”</td>
+                <td>Иванов</td>
+                <td>Ярослав</td>
+                <td>Иванович</td>
+                <td>12345</td>
+                <td><span class="gray-tex">+7 (</span>999<span class="gray-tex">)</span> 9999999</td>
+                <td><div class="b-table__active">Активен</div></td>
+                <td>22.02.2017</td>
+                <td>Вид отклонения в две строки</td>
+                <td>Название должности более чем в три ...</td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+
+
+<div class="b-modal" style="display: none;">
+    <div class="b-modal__paranja"></div>
+    <div class="b-modal__window b-modal__window_middle">
+        <div class="b-modal__heder">
+            <div class="b-modal__title-window">Загрузка фотографии</div>
+            <div class="b-modal__button-block">
+                <a href="#" class="b-modal__header-link _save">Сохранить</a>
+                <span class="b-modal__header-separator"></span>
+                <a href="#" class="b-modal__header-link _close link-tooltip">
+                    <span class="link-tooltip-title _last">Отменить</span>
+                </a>
+            </div>
+        </div>
+        <div class="b-modal__body _resize">
+            <div class="b-modal__crop">
+                <div class="crop-btn crop-btn_lt"></div>
+                <div class="crop-btn crop-btn_lr"></div>
+                <div class="crop-btn crop-btn_rb"></div>
+                <div class="crop-btn crop-btn_lb"></div>
+                <div class="crop-shadow"></div>
+                <!--<img src="img/man.jpg" alt="" />-->
+
+                <img src="img/man-vr.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="profile-modal">
+
+    <div class="profile-modal__header">
+        <div class="profile-modal__name">
+            Константинов Константин Константинович
+        </div>
+        <div class="profile-modal__menu">
+
+
+            <div class="top-menu_modal clearAfter">
+                <ul class="top-menu_modal__list">
+
+                    <li class="top-menu_modal__item">
+                        <a href="#" class="top-menu_modal__link b-icon-link b-icon-link_params b-icon-link_icon_book">
+                            <span class="top-menu_modal__title top-menu_modal__title_history">История изменений</span>
+                        </a>
+                    </li>
+                    <li class="top-menu_modal__item">
+                        <a href="#" class="top-menu_modal__link b-icon-link b-icon-link_params b-icon-link_icon_print">
+                            <span class="top-menu_modal__title top-menu_modal__title_print">Печать</span>
+                        </a>
+                    </li>
+                    <li class="top-menu_modal__item">
+                        <div class="top-menu_modal__separator"></div>
+                    </li>
+                    <li class="top-menu_modal__item">
+                        <a href="#" class="top-menu_modal__link b-icon-link b-icon-link_params b-icon-link_icon_edit">
+                            <span class="top-menu_modal__title top-menu_modal__title_edit">Редактировать</span>
+                        </a>
+                    </li>
+                    <li class="top-menu_modal__item">
+                        <a href="#" class="top-menu_modal__link b-icon-link b-icon-link_params b-icon-link_icon_basket">
+                            <span class="top-menu_modal__title top-menu_modal__title_basket">Удалить</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="profile-modal__body">
+
+        <div class="profile-modal__body-posit">
+
+            <div class="accordion">
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox">
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Основные сведения</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit">
+
+                            <div class="profile-pic">
+                                <div class="profile-pic__img" style="background-image: url(img/ava.jpg);">
+                                </div>
+                            </div>
+
+                            <div class="personal">
+                                <div class="b-block _md _border">
+                                    <div class="b-block__title">Телефон:</div>
+                                    <div class="b-block__text"><span class="text-border">+7 901 2345678</span> +7 987 6543210</div>
+                                </div>
+                                <div class="b-block _md _border">
+                                    <div class="b-block__title">Электронная почта:</div>
+                                    <div class="b-block__text">
+                                        kkkonstantinov1979@gmail.com
+                                    </div>
+                                </div>
+                                <div class="b-block _md _border">
+                                    <div class="b-block__title">Возраст:</div>
+                                    <div class="b-block__text">38 лет</div>
+                                </div>
+
+                                <div class="b-block _md _border">
+                                    <div class="b-block__title">Дата рождения:</div>
+                                    <div class="b-block__text">24.09.1979</div>
+                                </div>
+                                <div class="b-block _md _border">
+                                    <div class="b-block__title">Пол:</div>
+                                    <div class="b-block__text">Мужской</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox" checked>
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Учет</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit">
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Предприятие</div>
+                                <div class="b-block__text">ООО “Перевоз Ромашка Лимитед трейд холдинг”</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Подразделение</div>
+                                <div class="b-block__text">Транспортный отдел</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Должность</div>
+                                <div class="b-block__text">Ведущий специалист</div>
+                            </div>
+
+                            <div class="b-block _md ">
+                                <div class="b-block__title">Табельный номер:</div>
+                                <div class="b-block__text">54321</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Дата приема на работу:</div>
+                                <div class="b-block__text">22.05.2014</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Дата увольнения:</div>
+                                <div class="b-block__text">29.05.17</div>
+                            </div>
+
+                            <div class="hr"></div>
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Предприятие</div>
+                                <div class="b-block__text">ООО “Перевоз Ромашка Лимитед трейд холдинг”</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Подразделение</div>
+                                <div class="b-block__text">Транспортный отдел</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Должность</div>
+                                <div class="b-block__text">Ведущий специалист</div>
+                            </div>
+
+                            <div class="b-block _md ">
+                                <div class="b-block__title">Табельный номер:</div>
+                                <div class="b-block__text">54321</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Дата приема на работу:</div>
+                                <div class="b-block__text">22.05.2014</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title"></div>
+                                <div class="b-block__text">По настоящее время</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox" checked>
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Паспортные данные</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit">
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Серия</div>
+                                <div class="b-block__text">1234</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Номер</div>
+                                <div class="b-block__text">567890</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Код подразделения:</div>
+                                <div class="b-block__text">654321</div>
+                            </div>                                 
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Кем выдан:</div>
+                                <div class="b-block__text">Отделом Внутренних Дел округа Александровск-Сахалинского по Сахалинской области</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Дата выдачи:</div>
+                                <div class="b-block__text">30.09.1998</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox" checked>
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Персональные данные</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit">
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">ИНН:</div>
+                                <div class="b-block__text">1234567890</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">СНИЛС</div>
+                                <div class="b-block__text">12345678901</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Место рождения:</div>
+                                <div class="b-block__text">Россия, Сахалинская обл, г. Александровск-Сахалинск</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox" checked>
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Авторизация</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit accordion__posit_auth">
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Логин:</div>
+                                <div class="b-block__text">
+                                    kkkonstantinov1979
+                                    <div class="b-blocked">Заблокирован</div>
+                                </div>
+                            </div>
+                            <div class="b-block _lg _border">
+                                <div class="b-block__title">Роль</div>
+                                <div class="b-block__text">
+                                    <div class="b-block__posit-text">
+                                        <span class="text-border">Администратор объекта автоматизации</span>
+                                        Название роли 01
+                                    </div>
+                                    <span class="text-border">Название роли 02</span>
+                                    Длинное название для роли 03
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion__item">
+                    <input class="accordion__open" type="checkbox" checked>
+                    <i class="accordion__arrow"></i>
+                    <div class="accordion__title">Квалификация</div>
+                    <div class="accordion__content">
+                        <div class="accordion__posit">
+
+                            <div class="b-block _md">
+                                <div class="b-block__title">Учебное заведение:</div>
+                                <div class="b-block__text">Московский Государственный Университет</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Специальность:</div>
+                                <div class="b-block__text">Маркетинг</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__title">Период обучения:</div>
+                                <div class="b-block__text">01.09.2014  -  18.07.2016 </div>
+                            </div>
+
+                            <div class="hr"></div>
+
+                            <div class="b-block _md">
+                                <div class="b-block__text">Национальный исследовательский ядерный университет «МИФИ»</div>
+                            </div>
+                            <div class="b-block _md _border">
+                                <div class="b-block__text">Комплексное обеспечение информационной безопасности автоматизированных систем</div>
+                            </div>
+
+                            <div class="b-block _md _border">
+                                <div class="b-block__text">01.09.2007  -  24.08.2013 </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="b-modal" style="display: none;">
+    <div class="b-modal__paranja"></div>
+    <div class="b-modal__window b-modal__window_middle">
+        <div class="b-modal__heder">
+            <div class="b-modal__title-window">Загрузка фотографии</div>
+            <div class="b-modal__button-block">
+                <a href="#" class="b-modal__header-link _save">Сохранить</a>
+                <span class="b-modal__header-separator"></span>
+                <a href="#" class="b-modal__header-link _close link-tooltip">
+                    <span class="link-tooltip-title _last">Отменить</span>
+                </a>
+            </div>
+        </div>
+        <div class="b-modal__body _add">
+            <div class="b-modal__add-text">
+                Перетащите фотографию сюда
+                <div class="b-modal__add-text-or">или</div>
+
+                <div class="file_upload">Выберите файл на компьютере<input type="file" /></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

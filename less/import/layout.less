@@ -1,0 +1,44 @@
+.page {
+  background: @bgColor;
+}
+
+.header {
+  //max-width: 1920px;
+  min-width: 1280px;
+  width: 100%;
+  height: 80px;
+  background: @asphalt;
+
+  &_fixed {
+    position: fixed;
+    z-index: 320;
+  }
+
+  &__title {
+    font: bold 20px 'Roboto';
+    position: absolute;
+    top: 26px;
+    left: 101px;
+    color: @white;
+    @media (max-height: 881px) {
+      left: 81px;
+    }
+  }
+
+}
+
+.r-block {
+  width: 100%;
+  //max-width: 1920px;
+  min-width: 1024px;
+  box-sizing: border-box;
+  padding: 100px 20px 20px 99px;
+  transition: all .2s;
+  @media (max-height: 881px) {
+    padding-left: 83px;
+  }
+}
+
+//.left-menu_expanded + .r-block  {
+//  padding-left: 299px;
+//}

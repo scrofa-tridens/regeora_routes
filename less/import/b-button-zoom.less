@@ -1,0 +1,39 @@
+.b-button-zoom {
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	transition: all .3s ease;
+	width: 33px;
+	height: 33px;
+	box-shadow: 0 4px 10px rgba(0,4,7,.13);
+	border-radius: 3px;
+	background-color: #fff;
+	line-height: 0;
+	font-size: 0;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 15px;
+		height: 15px;
+		transform: translate(-50%, -50%);
+	}
+	&:hover {
+		background-color: #f8f7f5;
+		box-shadow: 0 4px 10px rgba(0,4,7,.2);
+	}
+
+	&_in {
+		&:after {
+			background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Imljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNSAxNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMzczRDQyO30KPC9zdHlsZT4KPHBvbHlnb24gc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIiBjbGFzcz0ic3QwIiBwb2ludHM9IjE1LDcgOCw3IDgsMCA3LDAgNyw3IDAsNyAwLDggNyw4IDcsMTUgOCwxNSA4LDggMTUsOCAiLz4KPC9zdmc+') no-repeat center;
+			background-size: 100% auto;
+		}
+	}
+	&_out {
+		&:after {
+			background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Imljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNSAxNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMzczRDQyO30KPC9zdHlsZT4KPHJlY3Qgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIiB5PSI3IiBjbGFzcz0ic3QwIiB3aWR0aD0iMTUiIGhlaWdodD0iMSIvPgo8L3N2Zz4=') no-repeat center;
+			background-size: 100% auto;
+		}
+	}
+}

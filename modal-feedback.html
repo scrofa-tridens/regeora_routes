@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="files/roboto.css"/>
+    <script src="files/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="b-modal__paranja b-modal__paranja_outside"></div>
+
+    <div class="b-modal b-modal-feedback">
+        <div class="b-modal__header">
+            <div class="b-modal__name">Обратная связь</div>
+            <div class="b-modal__menu">
+              <div class="b-modal__button-block">
+                  <div class="b-modal__header-separator"></div>
+                  <div class="b-modal__header-link _close link-tooltip">
+                      <span class="link-tooltip-title _last">Закрыть</span>
+                  </div>
+              </div>  
+            </div>
+        </div>
+
+        <div class="b-modal__body">
+            <div class="b-block _md">
+                <div class="b-block__title">Тип обращения</div>
+                <div class="b-select">
+                    <div class="b-select-pole">
+                        Тест
+                        <a class="b-icon-link b-icon-link_icon_select b-select__icon" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="b-block _md">
+                <div class="b-block__title">Тема обращения <span>*</span></div>
+                <div class="input">
+                    <input type="text" class="input__control" placeholder="Напишите тему обращения">
+                    <div class="input__style"></div>
+                </div>
+            </div>
+            <div class="b-block _xl">
+                <div class="b-block__title">Текст обращения <span>*</span></div>
+                <div class="textarea">
+                    <textarea class="textarea__control" placeholder="Введите текст обращения"></textarea>
+                    <div class="textarea__style"></div>
+                    <div class="textarea__attach">
+                        <a href="#" class="attach">Добавить файл</a>
+                        <ul class="textarea__files">
+                            <li class="textarea__file">Archive.zip</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="b-block _xl">
+                <div class="b-block__title">Ф.И.О. <span>*</span></div>
+                <div class="input">
+                    <input type="text" class="input__control" placeholder="Введите полное имя">
+                    <div class="input__style input__style_state_wrong"></div>
+                </div>
+            </div>
+            <div class="b-block _md">
+                <div class="b-block__title">Ваш e-mail <span>*</span></div>
+                <div class="input">
+                    <input type="text" class="input__control" placeholder="Адрес электронной почты">
+                    <div class="input__style"></div>
+                </div>
+            </div>
+            <div class="b-block _md">
+                <div class="b-block__title">Ваш телефон</div>
+                <div class="input">
+                    <input type="text" class="input__control" placeholder="Например, +7(код) ххх-хххх">
+                    <div class="input__style"></div>
+                </div>
+            </div>
+            <div class="b-block _md">
+                <div class="b-block__title">Подтвердите, что вы не робот</div>
+                <div class="b-block__text">
+                    <div class="captcha"></div>
+                    <a href="#" class="captcha-refresh"></a>
+                </div>
+            </div>
+            <div class="b-block _md">
+                <div class="b-block__title">Код подтверждения <span>*</span></div>
+                <div class="input">
+                    <input type="text" class="input__control" placeholder="Введите код подтверждения">
+                    <div class="input__style"></div>
+                </div>
+                <div class="b-block__comment">
+                    <span>*</span> Поля, обязательные для заполнения
+                </div>
+            </div>
+            <div class="b-modal__bottom">
+                <div class="b-block _xl">
+                    <div class="b-checkbox">
+                        <input type="checkbox" id="confirm" class="b-checkbox__inner">
+                        <label for="confirm" class="b-checkbox__label">Настоящим подтверждаю свое согласие на использование персональных данных</label>
+                    </div>
+                </div>
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_red b-button_shadow_gray b-button_size_md b-button_disabled" href="#">Отправить</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

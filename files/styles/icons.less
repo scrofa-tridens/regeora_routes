@@ -1,0 +1,78 @@
+@defaultSize: 64px;
+@svgDir: "../styles/svg/";
+
+.createIcon(@iconFile, @width: @defaultSize, @height: @defaultSize){
+  display: inline-block;
+  background-image: url("@{svgDir}@{iconFile}.svg");
+  background-size: cover;
+
+  width: @width;
+  height: @height;
+
+  &.icon-16{
+    .resize(16px, 16px);
+  }
+
+  &.icon-18{
+    .resize(18px, 18px);
+  }
+  &.icon-24{
+    .resize(24px, 24px);
+  }
+  &.icon-32{
+    .resize(32px, 32px);
+  }
+  &.icon-30{
+    .resize(30px, 30px);
+  }
+  &.icon-28{
+    .resize(28px, 28px);
+  }
+  &.icon-64{
+    .resize(64px, 64px);
+  }
+  &.icon-128{
+    .resize(128px, 128px);
+  }
+  &.icon-256{
+    .resize(256px, 256px);
+  }
+}
+
+.resize(@width, @height){
+  width: @width;
+  height: @height;
+}
+
+.set-icon-background(@iconFile){
+  background-image: url("@{svgDir}@{iconFile}.svg");
+}
+
+.icon-id-card{
+  .createIcon('id-card');
+}
+
+.icon-id-card-white{
+  .createIcon('id-card-white');
+}
+
+.icon-gear-red{
+  .createIcon('gear-red');
+}
+
+.icon-more-red{
+  .createIcon('more-red');
+}
+
+.icon-download-red{
+  .createIcon('download-red');
+}
+
+
+.icon-profile{
+  .createIcon('icon-profile-inact');
+}
+
+.icon-profile-hover{
+  .createIcon('icon-profile-act');
+}

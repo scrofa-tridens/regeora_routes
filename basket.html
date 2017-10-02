@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="files/roboto.css"/>
+    <script src="files/jquery.min.js"></script>
+    <!-- <script src="js/jquery.shorten.1.0.js"></script> -->
+
+
+    <!-- Стили которые надо добавить -->
+    <script src="js/script.js"></script>
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+    <!-- /Стили которые надо добавить -->
+    <!-- <script src="files/less.min.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="page">
+
+
+<div class="header header_fixed clearAfter">
+
+    <div class="header__title">Корзина</div>
+
+    <div class="top-menu clearAfter">
+        <ul class="top-menu__list">            
+            <li class="top-menu__item">
+                <a href="javascript:void(0)" class="top-menu__link top-menu__link_icon_search">
+                    <span class="top-menu__title top-menu__title_search">Поиск</span>
+                </a>
+                <div class="f-search f-search-posit">
+                    <form action="#">
+                        <input  class="f-search__pole" type="text" placeholder="поиск">
+                        <input  class="f-search__button" type="button">
+                    </form>
+                </div>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_filter">
+                    <span class="top-menu__title top-menu__title_filter">Фильтр</span>
+                </a>
+            </li>            
+            <li class="top-menu__item">
+                <a href="#" class="top-menu__link top-menu__link_icon_print">
+                    <span class="top-menu__title top-menu__title_print">Печать</span>
+                </a>
+            </li>                      
+            <li class="top-menu__item">
+                <div class="top-menu__separator"></div>
+            </li>
+            <li class="top-menu__item">
+                <div class="top-menu__label">Выбор диапазона:</div>
+                <div class="datepicker datepicker_from">
+                    <div class="input input_dark">
+                        <input type="text" class="input__control" placeholder="__.__.____" value="03.07.2017">
+                        <div class="input__style"></div>
+                    </div>
+                    <a href="#" class="b-icon-link b-icon-link_icon_datepicker datepicker__icon"></a>
+                    <div class="datepicker__body" style="display: none;">
+                        <div class="datepicker__nav clearAfter">
+
+
+                            <div class="b-select b-select_month">
+
+                                <div class="b-select-pole">
+                                    Январь
+                                    <a class="b-icon-link b-icon-link_icon_select b-select__icon active" href="#"></a>
+                                </div>
+                                <div class="b-select__list b-select__list_date">
+                                    <div class="b-select-scrol_date">
+                                        <ul>
+                                            <li>Январь</li>
+                                            <li>Февраль</li>
+                                            <li class="active">Март</li>
+                                            <li>Апрель</li>
+                                            <li>Май</li>
+                                            <li>Июнь</li>
+                                            <li>Июль</li>
+                                            <li>Август</li>
+                                            <li>Сентябрь</li>
+                                            <li>Октябрь</li>
+                                            <li>Ноябрь</li>
+                                            <li>Декабрь</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="b-select b-select_year">
+
+                                <div class="b-select-pole">
+                                    1984
+                                    <a class="b-icon-link b-icon-link_icon_select b-select__icon" href="#"></a>
+                                </div>
+                                <div class="b-select__list b-select__list_date" style="display: none;">
+                                    <div class="b-select-scrol_date">
+                                        <ul>
+                                            <li>1980</li>
+                                            <li class="active">2019</li>
+                                            <li>2390</li>
+                                            <li>4903</li>
+                                            <li>4590</li>
+                                            <li>4309</li>
+                                            <li>5454</li>
+                                            <li>5675</li>
+                                            <li>6769</li>
+                                            <li>8898</li>
+                                            <li>7876</li>
+                                            <li>9089</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="datepicker__table">
+                            <table>
+                                <tr>
+                                    <th>пн</th>
+                                    <th>вт</th>
+                                    <th>ср</th>
+                                    <th>чт</th>
+                                    <th>пт</th>
+                                    <th>сб</th>
+                                    <th>вс</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="datepicker__sep"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-gray"><a href="#" class="datepicker__day">30</a></td>
+                                    <td class="text-gray"><a href="#" class="datepicker__day">31</a></td>
+                                    <td><a href="#" class="datepicker__day">01</a></td>
+                                    <td><a href="#" class="datepicker__day">02</a></td>
+                                    <td><a href="#" class="datepicker__day">03</a></td>
+                                    <td><a href="#" class="datepicker__day">04</a></td>
+                                    <td><a href="#" class="datepicker__day">05</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">06</a></td>
+                                    <td><a href="#" class="datepicker__day">07</a></td>
+                                    <td><a href="#" class="datepicker__day">08</a></td>
+                                    <td><a href="#" class="datepicker__day">09</a></td>
+                                    <td><a href="#" class="datepicker__day">10</a></td>
+                                    <td><a href="#" class="datepicker__day">11</a></td>
+                                    <td><a href="#" class="datepicker__day">12</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">13</a></td>
+                                    <td><a href="#" class="datepicker__day">14</a></td>
+                                    <td><a href="#" class="datepicker__day">15</a></td>
+                                    <td><a href="#" class="datepicker__day">16</a></td>
+                                    <td><a href="#" class="datepicker__day">17</a></td>
+                                    <td><a href="#" class="datepicker__day">18</a></td>
+                                    <td><a href="#" class="datepicker__day">19</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">20</a></td>
+                                    <td><a href="#" class="datepicker__day">21</a></td>
+                                    <td><a href="#" class="datepicker__day">22</a></td>
+                                    <td><a href="#" class="datepicker__day">23</a></td>
+                                    <td><a href="#" class="datepicker__day">24</a></td>
+                                    <td><a href="#" class="datepicker__day">25</a></td>
+                                    <td><a href="#" class="datepicker__day">26</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">27</a></td>
+                                    <td><a href="#" class="datepicker__day">28</a></td>
+                                    <td><a href="#" class="datepicker__day">29</a></td>
+                                    <td><a href="#" class="datepicker__day">30</a></td>
+                                    <td><a href="#" class="datepicker__day">01</a></td>
+                                    <td><a href="#" class="datepicker__day">02</a></td>
+                                    <td><a href="#" class="datepicker__day">03</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>            
+                <div class="datepicker datepicker_to">
+                    <div class="input input_dark">
+                        <input type="text" class="input__control" placeholder="__.__.____" value="03.07.2017">
+                        <div class="input__style"></div>
+                    </div>
+                    <a href="#" class="b-icon-link b-icon-link_icon_datepicker datepicker__icon"></a>
+                    <div class="datepicker__body" style="display: none;">
+                        <div class="datepicker__nav clearAfter">
+
+
+                            <div class="b-select b-select_month">
+
+                                <div class="b-select-pole">
+                                    Январь
+                                    <a class="b-icon-link b-icon-link_icon_select b-select__icon active" href="#"></a>
+                                </div>
+                                <div class="b-select__list b-select__list_date">
+                                    <div class="b-select-scrol_date">
+                                        <ul>
+                                            <li>Январь</li>
+                                            <li>Февраль</li>
+                                            <li class="active">Март</li>
+                                            <li>Апрель</li>
+                                            <li>Май</li>
+                                            <li>Июнь</li>
+                                            <li>Июль</li>
+                                            <li>Август</li>
+                                            <li>Сентябрь</li>
+                                            <li>Октябрь</li>
+                                            <li>Ноябрь</li>
+                                            <li>Декабрь</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="b-select b-select_year">
+
+                                <div class="b-select-pole">
+                                    1984
+                                    <a class="b-icon-link b-icon-link_icon_select b-select__icon" href="#"></a>
+                                </div>
+                                <div class="b-select__list b-select__list_date" style="display: none;">
+                                    <div class="b-select-scrol_date">
+                                        <ul>
+                                            <li>1980</li>
+                                            <li class="active">2019</li>
+                                            <li>2390</li>
+                                            <li>4903</li>
+                                            <li>4590</li>
+                                            <li>4309</li>
+                                            <li>5454</li>
+                                            <li>5675</li>
+                                            <li>6769</li>
+                                            <li>8898</li>
+                                            <li>7876</li>
+                                            <li>9089</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="datepicker__table">
+                            <table>
+                                <tr>
+                                    <th>пн</th>
+                                    <th>вт</th>
+                                    <th>ср</th>
+                                    <th>чт</th>
+                                    <th>пт</th>
+                                    <th>сб</th>
+                                    <th>вс</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="datepicker__sep"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-gray"><a href="#" class="datepicker__day">30</a></td>
+                                    <td class="text-gray"><a href="#" class="datepicker__day">31</a></td>
+                                    <td><a href="#" class="datepicker__day">01</a></td>
+                                    <td><a href="#" class="datepicker__day">02</a></td>
+                                    <td><a href="#" class="datepicker__day">03</a></td>
+                                    <td><a href="#" class="datepicker__day">04</a></td>
+                                    <td><a href="#" class="datepicker__day">05</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">06</a></td>
+                                    <td><a href="#" class="datepicker__day">07</a></td>
+                                    <td><a href="#" class="datepicker__day">08</a></td>
+                                    <td><a href="#" class="datepicker__day">09</a></td>
+                                    <td><a href="#" class="datepicker__day">10</a></td>
+                                    <td><a href="#" class="datepicker__day">11</a></td>
+                                    <td><a href="#" class="datepicker__day">12</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">13</a></td>
+                                    <td><a href="#" class="datepicker__day">14</a></td>
+                                    <td><a href="#" class="datepicker__day">15</a></td>
+                                    <td><a href="#" class="datepicker__day">16</a></td>
+                                    <td><a href="#" class="datepicker__day">17</a></td>
+                                    <td><a href="#" class="datepicker__day">18</a></td>
+                                    <td><a href="#" class="datepicker__day">19</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">20</a></td>
+                                    <td><a href="#" class="datepicker__day">21</a></td>
+                                    <td><a href="#" class="datepicker__day">22</a></td>
+                                    <td><a href="#" class="datepicker__day">23</a></td>
+                                    <td><a href="#" class="datepicker__day">24</a></td>
+                                    <td><a href="#" class="datepicker__day">25</a></td>
+                                    <td><a href="#" class="datepicker__day">26</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="datepicker__day">27</a></td>
+                                    <td><a href="#" class="datepicker__day">28</a></td>
+                                    <td><a href="#" class="datepicker__day">29</a></td>
+                                    <td><a href="#" class="datepicker__day">30</a></td>
+                                    <td><a href="#" class="datepicker__day">01</a></td>
+                                    <td><a href="#" class="datepicker__day">02</a></td>
+                                    <td><a href="#" class="datepicker__day">03</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="top-menu__item">
+                <div class="top-menu__separator"></div>
+            </li>
+            <li class="top-menu__item">
+                <a href="#" class="b-button b-button_dark top-menu__button top-menu__button_recovery">Восстановить</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="left-menu">
+
+    <a href="#" class="left-menu-button"></a>
+
+    <ul class="left-menu__list">
+        <li class="left-menu__item">
+            <a class="left-menu__link passenger active" href="#">
+                <span class="left-menu__text">Перевозки пассажиров</span>
+                <span class="left-menu__title">Перевозки пассажиров</span>
+            </a>
+            <div class="sub-menu">
+                <ul class="left-menu__list">
+                    <li class="left-menu__item">
+                        <a class="left-menu__link back" href="#">
+                            <span class="left-menu__text">Вернуться назад</span>
+                            <span class="left-menu__title">Вернуться назад</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link management" href="#">
+                            <span class="left-menu__text">Управление правами</span>
+                            <span class="left-menu__title">Управление правами</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link accounting" href="#">
+                            <span class="left-menu__text">Кадровый учет</span>
+                            <span class="left-menu__title">Кадровый учет</span>
+                        </a>
+                    </li>
+                    <li class="left-menu__item">
+                        <a class="left-menu__link add-item" href="#">
+                            <span class="left-menu__text">Добавочный пункт меню</span>
+                            <span class="left-menu__title">Добавочный пункт меню</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link road" href="#">
+                <span class="left-menu__text">Содержание дорог</span>
+                <span class="left-menu__title">Содержание дорог</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link transport" href="#">
+                <span class="left-menu__text">Управление транспортом</span>
+                <span class="left-menu__title">Управление транспортом</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link network" href="#">
+                <span class="left-menu__text">Маршрутная сеть</span>
+                <span class="left-menu__title">Маршрутная сеть</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link map" href="#">
+                <span class="left-menu__text">Карта</span>
+                <span class="left-menu__title">Карта</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link waste" href="#">
+                <span class="left-menu__text">Перевозки отходов</span>
+                <span class="left-menu__title">Перевозки отходов</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link children" href="#">
+                <span class="left-menu__text">Перевозки детей</span>
+                <span class="left-menu__title">Перевозки детей</span>
+            </a>
+        </li>
+        <li class="left-menu__item">
+            <a class="left-menu__link reports" href="#">
+                <span class="left-menu__text">Отчеты</span>
+                <span class="left-menu__title">Отчеты</span>
+            </a>
+        </li>
+        <li class="left-menu__item 1111">
+            <a class="left-menu__link control" href="#">
+                <span class="left-menu__text">Управление</span>
+                <span class="left-menu__title">Управление</span>
+            </a>
+        </li>
+        <li class="left-menu__item left-menu__item_alert  2222">
+            <a class="left-menu__link alerts active" href="#">
+                <span class="left-menu__numb">4</span>
+                <span class="left-menu__text">Оповещения</span>
+                <span class="left-menu__title">Оповещения</span>
+            </a>
+        </li>
+        <li class="left-menu__item left-menu__item_profile">
+            <a class="left-menu__link profile" href="#">
+                <span class="left-menu__text">Профиль</span>
+                <span class="left-menu__title">Профиль</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- /.left-menu -->
+
+
+<div class="r-block">
+
+
+    <div class="b-table-box">
+        <table class="b-table">
+            <thead>
+                <tr class="b-table__header">
+                    <th class="b-table__check-box">
+                        <div class="b-checkbox">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-filter-00" />
+                            <label for="b-checkbox-filter-00" class="b-checkbox__label"></label>
+                        </div>
+                    </th>
+                    <th class="b-table__datetime">
+                        Дата / Время
+                    </th>
+                    <th class="b-table__name">
+                        ФИО сотрудника
+                    </th>
+                    <th class="b-table__essence" colspan="2">
+                        Сущность
+                    </th>
+                </tr>
+            </thead>
+            <tbody>            
+                <tr>
+                    <td>
+                        <div class="b-checkbox">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-01" />
+                            <label for="b-checkbox-01" class="b-checkbox__label"></label>
+                        </div>
+                    </td>
+                    <td class="b-table__datetime"> <span class="date">28.06.17</span> <span class="time">10:55:52</span></td>
+                    <td class="b-table__name">Иванов Ярослав Иванович</td>
+                    <td><div class="essance clearAfter">
+                        <div class="essance__main">Длинное название сущности в одну строку</div>
+                        <div class="essance__additional">
+                            <ul class="essance__list">
+                                <li class="essance__item">Очень длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                            </ul>
+                        </div>
+                    </div></td>
+                    <td class="b-table__recovery">
+                        <a href="#" class="b-table__recovery-btn">
+                            <span class="b-table__tooltip b-table__tooltip_recovery">Восстановить</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="b-checkbox">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-02" />
+                            <label for="b-checkbox-02" class="b-checkbox__label"></label>
+                        </div>
+                    </td>
+                    <td class="b-table__datetime"> <span class="date">28.06.17</span> <span class="time">10:55:52</span></td>
+                    <td class="b-table__name">Иванов Ярослав Иванович</td>
+                    <td><div class="essance clearAfter">
+                        <div class="essance__main">Длинное название сущности более чем в одну строку очень длинное название сущности</div>
+                        <div class="essance__additional">
+                            <ul class="essance__list">
+                                <li class="essance__item">Очень длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                            </ul>
+                        </div>
+                    </div></td>
+                    <td class="b-table__recovery">
+                        <a href="#" class="b-table__recovery-btn">
+                            <span class="b-table__tooltip b-table__tooltip_recovery">Восстановить</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="b-checkbox">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-03" />
+                            <label for="b-checkbox-03" class="b-checkbox__label"></label>
+                        </div>
+                    </td>
+                    <td class="b-table__datetime"> <span class="date">28.06.17</span> <span class="time">10:55:52</span></td>
+                    <td class="b-table__name">Петров Александр Васильевич</td>
+                    <td><div class="essance clearAfter">
+                        <div class="essance__main">Сущность</div>
+                        <div class="essance__additional">
+                            <ul class="essance__list">
+                                <li class="essance__item">Короткое название сущности в одну строку</li>
+                            </ul>
+                        </div>
+                    </div></td>
+                    <td class="b-table__recovery">
+                        <a href="#" class="b-table__recovery-btn">
+                            <span class="b-table__tooltip b-table__tooltip_recovery">Восстановить</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="disabled">
+                    <td>
+                        <div class="b-checkbox b-checkbox_disabled">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-04" />
+                            <label for="b-checkbox-04" class="b-checkbox__label"></label>
+                        </div>
+                    </td>
+                    <td class="b-table__datetime"> <span class="date">28.06.17</span> <span class="time">10:55:52</span></td>
+                    <td class="b-table__name">Иванов Илья Михайлович</td>
+                    <td><div class="essance clearAfter">
+                        <div class="essance__main">Длинное название сущности более чем в одну строку очень длинное название сущности</div>
+                        <div class="essance__additional">
+                            <ul class="essance__list">
+                                <li class="essance__item">Очень длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                                <li class="essance__item">Длинное название сущности</li>
+                            </ul>
+                        </div>
+                    </div></td>
+                    <td class="b-table__recovery">
+                        <a href="#" class="b-table__recovery-btn disabled">
+                            <span class="b-table__tooltip b-table__tooltip_recovery">Восстановить</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="b-checkbox">
+                            <input type="checkbox" class="b-checkbox__inner" id="b-checkbox-03" />
+                            <label for="b-checkbox-03" class="b-checkbox__label"></label>
+                        </div>
+                    </td>
+                    <td class="b-table__datetime"> <span class="date">28.06.17</span> <span class="time">10:55:52</span></td>
+                    <td class="b-table__name">Петров Петр Петрович</td>
+                    <td><div class="essance clearAfter">
+                        <div class="essance__main">Контракт на перевозку №123</div>
+                        <div class="essance__additional">
+                            <ul class="essance__list">
+                                <li class="essance__item">Школьные автобусы</li>
+                                <li class="essance__item">Электронный реестр контрактов на перевозки</li>
+                            </ul>
+                        </div>
+                    </div></td>
+                    <td class="b-table__recovery">
+                        <a href="#" class="b-table__recovery-btn">
+                            <span class="b-table__tooltip b-table__tooltip_recovery">Восстановить</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t-pagination-posit" colspan="11">
+                        <div class="t-pagination">                           
+                            <div class="t-pagination__title">
+                                Показано записей с 1 по 25 из 731
+                            </div>
+
+                            <div class="t-pagination__list clearAfter">
+                                <ul>
+                                    <li class="t-pagination__item _first"><a class="t-pagination__link _prev" href="#">Предыдущая</a></li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link" href="#">1</a></li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link active" href="#">2</a></li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link" href="#">3</a></li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link" href="#">4</a></li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link" href="#">5</a></li>
+                                    <li class="t-pagination__item">...</li>
+                                    <li class="t-pagination__item"><a class="t-pagination__link" href="#">17</a></li>
+                                    <li class="t-pagination__item _last"><a class="t-pagination__link _next" href="#">Следующая</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>

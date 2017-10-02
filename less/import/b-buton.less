@@ -1,0 +1,117 @@
+
+.b-button {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  transition: color .3s, background .3s;
+  background: @redLight;
+
+  &_shdow_red {
+    box-shadow: 0 2px 6px rgba(226,72,62,.7);
+  }
+  &_shdow_gray {
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  }
+
+
+
+  &_size_md {
+    width: @mdWidth;
+    height: @mdHeight;
+    line-height: @mdHeight;
+  }
+
+  &_size_lg {
+    width: @lgWidth;
+    height: @lgHeight;
+    line-height: @lgHeight;
+  }
+
+  &:hover,&:active,&:visited,&:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #ffffff;
+    background: @red_hover
+  }
+
+  &:active {
+    margin-top: 1px;
+  }
+
+  &_disabled {
+    cursor: default !important;
+    color: @gray2;
+    background: @asphalt2;
+
+    &:hover {
+      background: @asphalt2;
+    }
+
+    &:active {
+      margin-top: 0;
+    }
+
+  }
+
+  &_white {
+    color: @asphalt2;
+    background: #ffffff;
+    &:hover {
+      color: @asphalt2;
+      background: @gray6 ;
+    }
+    &:active {
+      box-shadow: none;
+      background: @gray7;
+    }
+    &:visited, &:focus {
+      color: @asphalt2;
+    }
+
+  }
+
+  &_red {
+
+    &:active {
+      background: @redActive;
+      box-shadow: none;
+    }
+    &:visited, &:focus {
+      color: #ffffff;
+    }
+
+  }
+
+  &_dark {
+    background: @asphalt2;
+    color: @redLight;
+    &:hover {
+      background-color: @dark_asphalt;
+      color: @redLight;
+    }
+    &:active {
+      box-shadow: none;
+      background: @dark_active;
+      box-shadow: inset 0 1px 1px fade(@black, 35%);
+    }
+    &:visited, &:focus {
+      color: @redLight;
+    }
+  }
+
+
+}
+
+input[type="button"]:disabled {
+  cursor: default !important;
+  color: @gray2;
+  background: @asphalt2;
+}

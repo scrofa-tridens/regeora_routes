@@ -1,0 +1,161 @@
+.b-profile-crear {
+
+  .input {
+    padding-right: 20px;
+  }
+
+  .profile-modal {
+    &:before {
+      margin-right: 241px;
+    }
+  }
+
+
+  .profile-pic {
+    width: 297px;
+  }
+
+  .b-block {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    //min-height: 55px;
+    padding-left: 0;
+    //margin: 0 -3px 0 20px;
+
+    &._marg {
+      margin-right: 30px !important;
+    }
+
+    &._border {
+      &:before {
+        display: none;
+      }
+    }
+
+    &._sm {
+      max-width: 73px;
+      margin: 0 -3px 0 20px;
+    }
+
+    &._mdl {
+      max-width: 188px;
+      margin: 0 -3px 0 20px;
+    }
+
+    &._md {
+      max-width: 281px;
+      margin: 0 -3px 0 20px;
+    }
+    &._lg {
+      max-width: 455px;
+    }
+    &._xl {
+      width: 884px;
+      margin: 0 20px;
+    }
+
+    &__title {
+      font-size: 14px;
+      font-weight: bold;
+      color: @asphalt2;
+      padding-bottom: 4px;
+      &._disable {
+        color: @gray4;
+      }
+    }
+  }
+
+  .profile-pic {
+    display: inline-block;
+    width: 298px;
+    min-height: 185px;
+    vertical-align: top;
+    &__img {
+      width: 240px;
+      height: 240px;
+      display: block;
+      margin: 14px 0 0 40px;
+      text-align: center;
+      border-radius: 50%;
+      // background: @textFieldBg;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: @textFieldBg;
+      vertical-align: middle;
+      line-height: 240px;
+      &.img-empty {
+        background-size: auto 145px;
+      }
+
+      // img {
+      //   vertical-align: middle;
+      //   display: inline-block;
+      // }
+    }
+
+    .b-icon-link {
+      position: absolute;
+      z-index: 100;
+      top: 230px;
+      left: 231px;
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+      background: @redLight;
+    }
+
+    .top-menu__title {
+      font-size: 12px;
+      text-align: center;
+      line-height: 15px;
+      color: @asphalt2;
+    }
+
+
+  }
+
+
+}
+
+
+.b-profile-crear.no-scrol {
+
+  .b-block {
+
+    &._sm {
+      max-width: 73px;
+      margin: 0 -3px 0 20px;
+    }
+
+    &._mdl {
+      max-width: 188px;
+      margin: 0 -3px 0 20px;
+    }
+
+    &._md {
+      max-width: 289px;
+      margin: 0 -3px 0 20px;
+    }
+    &._lg {
+      max-width: 455px;
+    }
+    &._xl {
+      width: 900px;
+      margin: 0 20px;
+    }
+
+  }
+
+}
+
+
+
+
+
+//* {
+//  box-shadow: 0 0 1px #f00;
+//}

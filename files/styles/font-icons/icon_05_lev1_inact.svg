@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 384 288" style="enable-background:new 0 0 384 288;" xml:space="preserve">
+<g id="lines">
+</g>
+<g id="icon_x5F_05_x5F_level1_x5F_inact">
+	<path d="M368,0C359,0,24,0,16,0S0,8,0,16c0,10,0,248,0,256s7,16,16,16s343,0,352,0s16-6,16-16s0-248,0-256S377,0,368,0z M368,272
+		H16V16h352V272z"/>
+	<circle cx="40" cy="40" r="8"/>
+	<circle cx="72" cy="40" r="8"/>
+	<circle cx="104" cy="40" r="8"/>
+	<path d="M344,64H40c-4.4,0-8,3.6-8,8s3.6,8,8,8h304c4.4,0,8-3.6,8-8S348.4,64,344,64z"/>
+	<polygon points="32,183 45,192 76,137 108,159 159,134 152,118 108,139 74,112 69,112 	"/>
+	<polygon points="32,224 76,192 92,202 148,158 159,171 92,224 76,214 41,240 	"/>
+	<path d="M176,112v128h48V112H176z M208,224h-16v-96h16V224z"/>
+	<path d="M240,176v64h48v-64H240z M272,224h-16v-32h16V224z"/>
+	<path d="M304,144v96h48v-96H304z M336,224h-16v-64h16V224z"/>
+</g>
+</svg>

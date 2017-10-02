@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="files/roboto.css"/>
+    <script src="files/jquery.min.js"></script>
+
+
+    <!-- Стили которые надо добавить -->
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+    <!-- /Стили которые надо добавить -->
+    <!-- <script src="files/less.min.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+    <div class="b-modal b-modal-exit">
+        <div class="b-modal__overlay"></div>
+        <div class="b-modal__window b-modal__window_small">
+            <div class="b-modal__img"></div>
+            <div class="b-modal__title">
+                <div class="b-modal__txt">Вы уверены, что<br>хотите выйти из системы?</div>                
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_white b-button_shdow_gray b-button_size_md" href="#">Отменить</a>
+                <a class="b-button b-button_red b-button_shdow_red b-button_size_md" href="#">Выйти</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal b-modal-recovery-rejected">
+        <div class="b-modal__overlay"></div>
+        <div class="b-modal__window b-modal__window_small">
+            <div class="b-modal__img"></div>
+            <div class="b-modal__title">
+                <div class="b-modal__txt">Восстановление объекта невозможно, так как приведет к нарушению целостности баз данных.</div>
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_red b-button_shdow_red b-button_size_md" href="#">Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal b-modal-recovery-completed">
+        <div class="b-modal__overlay"></div>
+        <div class="b-modal__window b-modal__window_small">
+            <div class="b-modal__img"></div>
+            <div class="b-modal__title">
+                <div class="b-modal__txt">Выбранный объект восстановлен!</div>
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_red b-button_shdow_red b-button_size_md" href="#">Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal b-modal-recorery-request">
+        <div class="b-modal__overlay"></div>
+        <div class="b-modal__window b-modal__window_small">
+            <div class="b-modal__img"></div>
+            <div class="b-modal__title">
+                <div class="b-modal__txt">Вы действительно хотите<br>восстановить выбранный объект?</div>               
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_red b-button_shdow_red b-button_size_md" href="#">Восстановить</a>
+                <a class="b-button b-button_white b-button_shdow_gray b-button_size_md" href="#">Отменить</a>                
+            </div>
+        </div>
+    </div>
+
+    <div class="b-modal b-modal-remove">
+        <div class="b-modal__overlay"></div>
+        <div class="b-modal__window b-modal__window_small">
+            <div class="b-modal__img"></div>
+            <div class="b-modal__title">
+                <div class="b-modal__txt">Вы действительно хотите удалить выбранный объект?</div>               
+            </div>
+            <div class="b-modal__buttons">
+                <a class="b-button b-button_red b-button_shdow_red b-button_size_md" href="#">Удалить</a>
+                <a class="b-button b-button_white b-button_shdow_gray b-button_size_md" href="#">Отменить</a>                
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

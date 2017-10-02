@@ -1,0 +1,297 @@
+// @import "../../../styles/values";
+
+
+// *** OLD SELECT COMPONENT *** //
+.datepicker {
+    position: relative;
+
+    .text-gray {
+        color: @gray4;
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 50;
+        top: 23px;
+        right: 23px;
+    }
+
+    &__body {
+        position: absolute;
+        top: 48px;
+        z-index: 300;
+        font: 12px 'Roboto';
+        padding: 20px 17px;
+        color: @asphalt2;
+        border-radius: 3px;
+        background-color: @white;
+        box-shadow: 0 4px 13px rgba(0, 0, 0, .2);
+        min-width: 281px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            right: 5%;
+            top: -8px;
+            display: block;
+            width: 16px;
+            height: 8px;
+            margin: 0;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAAYFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGhoZvb29vb2/e3t7f39/FxcXGxsb39/f39/fp6enp6en09PT09PT39/f39/f7+/v9/f37+/v////+/v7////////VzLMWAAAAH3RSTlMAAQIDBAYHCQoMExYXLzA0NmFiZ2ien6Sl1tfY9fb+DTq1ygAAAFZJREFUCB0FwVEOgzAQQ8Fnr1FRgPb+1+wPqlJlmREISZe+3U0TwNJ+8L+7FxSSvX3izAYoyfb7BZUfQFmuYwBEs6HK3k8BkLVQxTkDAMpsGY8NACDDPI5YE8xfQlCMAAAAAElFTkSuQmCC') no-repeat 50% 50%;
+        }
+    }
+
+    &__day {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        margin: 1px 2px 1px 1px;
+        text-align: center;
+        vertical-align: middle;
+        color: @asphalt2;
+        border-radius: 3px;
+        text-decoration: none;
+
+        &:hover {
+            color: @asphalt2;
+            text-decoration: none;
+            background: @textFieldBg;
+        }
+        &:visited, &:focus {
+            color: @asphalt2;
+            text-decoration: none;
+        }
+        &:active {
+            color: @white;
+            background: @redLight;
+        }
+
+    }
+
+    &__sep {
+        width: 100%;
+        height: 1px;
+        margin: 16px 0 6px;
+        background: @bgColor;
+    }
+
+    &__nav {
+
+        .b-select_month, .b-select_year {
+            width: 117px;
+            width: 117px;
+            display: inline-block;
+        }
+
+        .b-select_month {
+            margin-right: 10px;
+        }
+
+        .b-select__list {
+            padding-top: 6px;
+            max-height: 233px;
+            min-height: 233px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .12);
+        }
+
+        //.b-select_month {
+        //  float: left;
+        //}
+        //.b-select_year {
+        //  float: right;
+        //}
+
+        .b-select {
+        }
+        .b-select-pole {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 13px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            background: @textFieldBg;
+        }
+    }
+
+    .b-select__icon {
+        right: 25px;
+        margin: -2px 0 0 0;
+
+    }
+
+    table {
+        tr {
+
+            th {
+                padding: 10px 0 0;
+                text-align: center;
+                color: @gray4;
+            }
+
+            td {
+
+            }
+
+        }
+    }
+
+}
+
+
+// *** SELECT COMPONENT *** //
+
+.DayPickerInput-OverlayWrapper {
+    z-index: 99999;
+
+    .DayPickerInput-Overlay {
+        border-radius: 3px;
+    }
+
+    .DayPicker {
+        width: 281px;
+        box-shadow: 0 4px 13px rgba(0, 0, 0, 0.2);        
+        background-color: @white;
+        border-radius: 3px;
+        font: 12px 'Roboto';
+        &:before {
+            content: '';
+            position: absolute;
+            right: 5%;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 6px 8px 6px;
+            border-color: transparent transparent @white transparent;
+        }
+    }
+
+    .DayPicker-wrapper {
+        padding: 20px 17px;        
+        color: #373d42;
+        position: relative;    
+        outline: none;    
+    }
+
+    .select-calendar {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .select-calendar.month {
+        margin-right: 10px;
+    }
+    .select-calendar.year {
+
+    }
+
+    .DayPicker-NavBar {
+        display: none;
+    }
+
+    .DayPicker-Weekday {
+        padding: 18px 0 24px;
+        text-align: center;
+        color: @gray4;
+        text-transform: lowercase;
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 6px;
+
+        abbr {
+            border: none;
+            text-decoration: none;
+        }
+    }
+
+    .DayPicker-Month {
+        // width: calc(~'100% - 34px');
+        width: 100%;
+        margin: 0;
+    }
+    .DayPicker-Week {
+
+    }
+
+    .DayPicker-Day {
+        border: none;
+        outline: none;
+        font-size: 12px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        margin: 1px 2px 1px 1px;
+        text-align: center;
+        vertical-align: middle;
+        color: @asphalt2;
+        border-radius: 3px;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0;
+
+
+        &--outside {
+            opacity: 0.3;
+        }
+        &--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+            color: @white;
+            background: @redLight;
+        }
+
+        &:hover {
+            color: @asphalt2;
+            text-decoration: none;
+            background: @textFieldBg;
+        }
+        &:visited, &:focus {
+            color: @asphalt2;
+            text-decoration: none;
+        }
+        &:active {
+            color: @white;
+            background: @redLight;
+        }
+    }
+    .DayPicker-Caption {
+        text-align: left;
+        height: 40px;
+        select {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 13px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            background: @textFieldBg;
+            width: 117px;
+            outline: none;
+            &[name='month'] {
+                margin-right: 10px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 6px;
+                margin: 0;
+                background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…QgMCw0LjQgNC43LDAgNSwwIDUsMCA1LDAgNS4zLDAgMTAsNC40IDEwLDQuNCAiLz48L3N2Zz4=') 50% 50% no-repeat;
+
+            }
+            option {
+              background-color: #fff;
+              padding: 8px 35px 8px 15px;
+                
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 17px;
+            right: 17px;
+            top: 108px;
+            height: 1px;
+            background-color: @bgColor;
+        }
+    }
+}
